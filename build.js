@@ -7,13 +7,14 @@ const CONTENTS = {
   TAIL: "",
 };
 
-const subDirs = ["outline", "solid"];
+const subDirs = ["24/outline", "24/solid"];
 
 subDirs.forEach((subDir) => {
   const path = `./node_modules/heroicons/${subDir}/`;
   const fileNames = fs.readdirSync(path);
+  const SUBDIR = subDir.replace('24/','');
 
-  const object = CONTENTS[subDir.toUpperCase()];
+  const object = CONTENTS[SUBDIR.toUpperCase()];
 
   fileNames.forEach((filename) => {
     const contents = fs
@@ -21,8 +22,8 @@ subDirs.forEach((subDir) => {
       .toString()
       .trimEnd();
     const lines = contents.split("\n");
-    if (!CONTENTS.HEAD[subDir]) {
-      CONTENTS.HEAD[subDir] = lines[0].replace(/ aria-hidden="true"/g, "");
+    if (!CONTENTS.HEAD[SUBDIR]) {
+      CONTENTS.HEAD[SUBDIR] = lines[0].replace(/ aria-hidden="true"/g, "");
     }
     if (!CONTENTS.TAIL) {
       CONTENTS.TAIL = lines[lines.length - 1];
@@ -31,7 +32,7 @@ subDirs.forEach((subDir) => {
       .slice(1, lines.length - 1)
       .join("")
       .replace(/\ \ /g, "");
-    object[filename.slice(0, -4)] = guts;
+    if (object) object[filename.slice(0, -4)] = guts;
   });
 });
 

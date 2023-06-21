@@ -1,8 +1,6 @@
-# `eleventy-plugin-heroicons`
+# Eleventy: heroicons plugin
 
-[![npm](https://img.shields.io/npm/v/eleventy-plugin-heroicons.svg)](https://npmjs.com/package/eleventy-plugin-heroicons) [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/eleventy-plugin-heroicons.svg)](https://npmjs.com/package/eleventy-plugin-heroicons) [![npm](https://img.shields.io/npm/dt/eleventy-plugin-heroicons.svg)](https://npmjs.com/package/eleventy-plugin-heroicons)
-
-🛡 Shortcodes to add [Heroicons](https://heroicons.com/) to your [Eleventy](https://11ty.dev) projects
+🛡 Shortcodes to add [heroicons](https://heroicons.com/) to your [Eleventy](https://11ty.dev) projects
 
 ## Get started
 
@@ -45,8 +43,6 @@ If you are using a templating language that supports object arguments like Nunju
 ```
 
 ### `heroicon_outline`/`heroicon_solid`
-
-**⚠️ Warning**: These APIs are subject to change in future releases.
 
 These wrap the `heroicon` shortcode and pass a style.
 
@@ -112,4 +108,4 @@ If you passed a `className` to the configuration object, then you could use that
 
 ## License
 
-[MIT](./LICENSE) © [Sean McPherson](https://seanmcp.com)
+[MIT](./LICENSE)
