@@ -1,5 +1,5 @@
 {
-  "name": "eleventy-plugin-heroicons",
+  "name": "@cdransf/eleventy-plugin-heroicons",
   "version": "1.2.0",
   "description": "Shortcodes to add Heroicons to your Eleventy projects",
   "main": "heroicons.js",
